@@ -29,8 +29,9 @@ class PostSerializer(serializers.ModelSerializer):
     )
 
   def get_validation_exclusions(self, *args, **kwargs):
-    """
+    """Returns a list of fields we wish to skip
     """
     # Add author to the list of validations we wish to skip
     exclusions = super(PostSerializer, self).get_validation_exclusions()
+
     return exclusions + ['author']
