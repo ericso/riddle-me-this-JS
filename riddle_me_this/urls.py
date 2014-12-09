@@ -7,18 +7,21 @@ from rest_framework_nested import routers
 
 from authentication.views import AccountViewSet, LoginView, LogoutView
 from posts.views import AccountPostsViewSet, PostViewSet
+from riddles.views import AccountRiddlesViewSet, RiddleViewSet
 
 
 router = routers.SimpleRouter()
 router.register(r'accounts', AccountViewSet)
 router.register(r'posts', PostViewSet)
+router.register(r'riddles', RiddleViewSet)
 
-# accounts_router provides the nested routing need to access the posts
+# accounts_router provides the nested routing need to access the objects
 #  for a specific Account
 accounts_router = routers.NestedSimpleRouter(
   router, r'accounts', lookup='account'
 )
 accounts_router.register(r'posts', AccountPostsViewSet)
+accounts_router.register(r'riddles', AccountRiddlesViewSet)
 
 
 urlpatterns = patterns(
