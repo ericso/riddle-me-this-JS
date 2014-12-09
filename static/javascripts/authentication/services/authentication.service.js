@@ -80,7 +80,7 @@
       return $http.post('/api/v1/auth/login/', {
         email: email,
         password: password
-      }).then(loginSuccessFn, loginErrorFn);
+      }).then(loginSuccessFn);
 
       /**
       * @name loginSuccessFn
@@ -91,13 +91,13 @@
         window.location = '/';
       }
 
-      /**
-      * @name loginErrorFn
-      * @desc Log failure to the console
-      */
-      function loginErrorFn(data, status, headers, config) {
-        console.error("Login failure!");
-      }
+      // /**
+      // * @name loginErrorFn
+      // * @desc Log failure to the console
+      // */
+      // function loginErrorFn(data, status, headers, config) {
+      //   console.error("Login failure!");
+      // }
     }
 
 

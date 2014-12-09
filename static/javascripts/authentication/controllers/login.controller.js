@@ -41,15 +41,7 @@
     function login() {
       Authentication
         .login(vm.email, vm.password)
-        .then(loginSuccessFn, loginErrorFn);
-
-      /**
-      * @name loginSuccessFn
-      * @desc Show login success on Snackbar
-      */
-      function loginSuccessFn(data, status, headers, config) {
-        Snackbar.show('Successfully logged in as ' + data.username);
-      }
+        .then(null, loginErrorFn);
 
       /**
       * @name logoutErrorFn
