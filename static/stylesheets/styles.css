@@ -1,3 +1,4 @@
+/* Posts */
 .no-posts-here {
   text-align: center;
 }
@@ -15,6 +16,30 @@
 }
 
 .btn-add-new-post {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+
+/* Riddles */
+.no-riddles-here {
+  text-align: center;
+}
+
+.riddle {}
+
+.riddle .riddle__meta {
+  font-weight: bold;
+  text-align: right;
+  padding-bottom: 19px;
+}
+
+.riddle .riddle__meta a:hover {
+  text-decoration: none;
+}
+
+.btn-add-new-riddle {
   position: fixed;
   bottom: 20px;
   right: 20px;

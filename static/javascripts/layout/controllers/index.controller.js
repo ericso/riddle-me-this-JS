@@ -9,12 +9,12 @@
     .module('riddles.layout.controllers')
     .controller('IndexController', IndexController);
 
-  IndexController.$inject = ['$scope', 'Authentication', 'Posts', 'Snackbar'];
+  IndexController.$inject = ['$scope', 'Authentication', 'Riddles', 'Snackbar'];
 
   /**
   * @namespace IndexController
   */
-  function IndexController($scope, Authentication, Posts, Snackbar) {
+  function IndexController($scope, Authentication, Riddles, Snackbar) {
     var vm = this;
 
     vm.isAuthenticated = Authentication.isAuthenticated();
@@ -28,34 +28,34 @@
     * @memberOf riddles.layout.controllers.IndexController
     */
     function activate() {
-      Posts.all().then(postsSuccessFn, postsErrorFn);
+      Riddles.all().then(riddlesSuccessFn, riddlesErrorFn);
 
-      // When creating a new post, fire off an event called post.created
-      // By catching this event here, we can add this new post to the
-      //  front of the vm.posts array
-      $scope.$on('post.created', function(event, post) {
-        vm.posts.unshift(post);
+      // When creating a new riddle, fire off an event called riddle.created
+      // By catching this event here, we can add this new riddle to the
+      //  front of the vm.riddles array
+      $scope.$on('riddle.created', function(event, riddle) {
+        vm.riddles.unshift(riddle);
       });
 
-      // If there is an error, we have to remove the post we created at the
-      //  front of vm.posts
-      $scope.$on('post.created.error', function () {
-        vm.posts.shift();
+      // If there is an error, we have to remove the riddle we created at the
+      //  front of vm.riddles
+      $scope.$on('riddle.created.error', function () {
+        vm.riddles.shift();
       });
 
       /**
-      * @name postsSuccessFn
-      * @desc Update posts array on view
+      * @name riddlesSuccessFn
+      * @desc Update riddles array on view
       */
-      function postsSuccessFn(data, status, headers, config) {
-        vm.posts = data.data;
+      function riddlesSuccessFn(data, status, headers, config) {
+        vm.riddles = data.data;
       }
 
       /**
-      * @name postsErrorFn
+      * @name riddlesErrorFn
       * @desc Show snackbar with error
       */
-      function postsErrorFn(data, status, headers, config) {
+      function riddlesErrorFn(data, status, headers, config) {
         Snackbar.error(data.error);
       }
     }
