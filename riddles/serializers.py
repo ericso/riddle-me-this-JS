@@ -1,24 +1,22 @@
 from rest_framework import serializers
 
 from authentication.serializers import AccountSerializer
-from posts.models import Post
+from riddles.models import Riddle
 
 
-class PostSerializer(serializers.ModelSerializer):
-  """
-  """
-  # When serializing a Post object, we want to include all of the author's
-  #  information. Within Django REST Framework, this is known as a nested
-  #  relationship.
-  author = AccountSerializer(required=False)
+class RiddleSerializer(serializers.ModelSerializer):
+  author = AccountSerializer(read_only=True, required=False)
 
   class Meta:
-    model = Post
+    model = Riddle
 
     fields = (
       'id',
       'author',
-      'content',
+      'question',
+      'hint',
+      'answer',
+      'source',
       'created_at',
       'updated_at',
     )
@@ -32,6 +30,6 @@ class PostSerializer(serializers.ModelSerializer):
     """Returns a list of fields we wish to skip
     """
     # Add author to the list of validations we wish to skip
-    exclusions = super(PostSerializer, self).get_validation_exclusions()
+    exclusions = super(RiddleSerializer, self).get_validation_exclusions()
 
     return exclusions + ['author']
