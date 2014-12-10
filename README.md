@@ -8,8 +8,8 @@
 
 * Fork this repository.
 * `$ git clone git@github.com:<your username>/riddle-me-this.git`
-* `$ mkvirtualenv thinkster-djangular`
-* `$ cd thinkster-django-angular-boilerplate/`
+* `$ mkvirtualenv riddle-me-this`
+* `$ cd riddle-me-this-master/`
 * `$ pip install -r requirements.txt`
 * `$ npm install -g bower`
 * `$ npm install`
