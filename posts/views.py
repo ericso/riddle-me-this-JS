@@ -18,22 +18,22 @@ class PostViewSet(viewsets.ModelViewSet):
       return (permissions.AllowAny(),)
     return (permissions.IsAuthenticated(), IsAuthorOfPost(),)
 
-  ### New code that doesn't work
-  # def perform_create(self, serializer):
-  #   """Called before the model of this view is saved.
+  def perform_create(self, serializer):
+    """Called before the model of this view is saved.
 
-  #   When a Post object is created it has to be associated with an author.
-  #   """
-  #   instance = serializer.save(author=self.request.user)
-
-  #   return super(PostViewSet, self).perform_create(serializer)
-
-  def pre_save(self, obj):
-    """pre_save is called before the model of this view is saved
+    When a Post object is created it has to be associated with an author.
     """
-    obj.author = self.request.user
+    instance = serializer.save(author=self.request.user)
 
-    return super(PostViewSet, self).pre_save(obj)
+    return super(PostViewSet, self).perform_create(serializer)
+
+  ### django-rest-framework 2.4.4
+  # def pre_save(self, obj):
+  #   """pre_save is called before the model of this view is saved
+  #   """
+  #   obj.author = self.request.user
+
+  #   return super(PostViewSet, self).pre_save(obj)
 
 
 class AccountPostsViewSet(viewsets.ViewSet):
