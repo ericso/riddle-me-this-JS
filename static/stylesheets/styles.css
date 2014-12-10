@@ -39,6 +39,11 @@
   text-decoration: none;
 }
 
+.riddle .riddle_question {
+  text-align: left;
+  padding-bottom: 19px;
+}
+
 .btn-add-new-riddle {
   position: fixed;
   bottom: 20px;

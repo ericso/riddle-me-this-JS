@@ -4,10 +4,11 @@ from authentication.models import Account
 
 
 class Riddle(models.Model):
-  """Riddles have three parts:
+  """Riddles have four parts:
     1. Question
     2. Hint
     3. Answer
+    4. Source
   """
   author = models.ForeignKey(Account)
 

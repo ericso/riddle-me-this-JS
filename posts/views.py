@@ -18,14 +18,22 @@ class PostViewSet(viewsets.ModelViewSet):
       return (permissions.AllowAny(),)
     return (permissions.IsAuthenticated(), IsAuthorOfPost(),)
 
-  def perform_create(self, serializer):
-    """Called before the model of this view is saved.
+  ### New code that doesn't work
+  # def perform_create(self, serializer):
+  #   """Called before the model of this view is saved.
 
-    When a Post object is created it has to be associated with an author.
+  #   When a Post object is created it has to be associated with an author.
+  #   """
+  #   instance = serializer.save(author=self.request.user)
+
+  #   return super(PostViewSet, self).perform_create(serializer)
+
+  def pre_save(self, obj):
+    """pre_save is called before the model of this view is saved
     """
-    instance = serializer.save(author=self.request.user)
+    obj.author = self.request.user
 
-    return super(PostViewSet, self).perform_create(serializer)
+    return super(PostViewSet, self).pre_save(obj)
 
 
 class AccountPostsViewSet(viewsets.ViewSet):

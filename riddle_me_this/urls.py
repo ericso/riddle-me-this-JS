@@ -1,10 +1,9 @@
 from django.conf.urls import patterns, include, url
 from django.views.generic import TemplateView
 
-from riddle_me_this.views import IndexView
-
 from rest_framework_nested import routers
 
+from riddle_me_this.views import IndexView
 from authentication.views import AccountViewSet, LoginView, LogoutView
 from posts.views import AccountPostsViewSet, PostViewSet
 from riddles.views import AccountRiddlesViewSet, RiddleViewSet

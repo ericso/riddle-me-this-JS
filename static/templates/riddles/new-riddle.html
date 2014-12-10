@@ -1,0 +1,42 @@
+<form role="form" ng-submit="vm.submit()">
+  <div class="form-group">
+
+    <label for="riddle__question">Question</label>
+    <textarea class="form-control"
+              id="riddle__question"
+              rows="3"
+              placeholder="riddle's question"
+              ng-model="vm.question">
+    </textarea>
+
+    <label for="riddle__hint">Hint</label>
+    <textarea class="form-control"
+              id="riddle__hint"
+              rows="3"
+              placeholder="riddle's hint"
+              ng-model="vm.hint">
+    </textarea>
+
+    <label for="riddle__answer">Answer</label>
+    <textarea class="form-control"
+              id="riddle__answer"
+              rows="3"
+              placeholder="riddle's answer"
+              ng-model="vm.answer">
+    </textarea>
+
+    <label for="riddle__source">Source</label>
+    <textarea class="form-control"
+              id="riddle__source"
+              rows="3"
+              placeholder="riddle's source"
+              ng-model="vm.source">
+    </textarea>
+  </div>
+
+  <div class="form-group">
+    <button type="submit" class="btn btn-primary">
+      Submit
+    </button>
+  </div>
+</form>
