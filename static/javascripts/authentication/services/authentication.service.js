@@ -48,7 +48,7 @@
         username: username,
         password: password,
         email: email
-      }).then(registerSuccessFn, registerErrorFn);
+      }).then(registerSuccessFn);
 
       /**
       * @name registerSuccessFn
@@ -58,13 +58,13 @@
         Authentication.login(email, password);
       }
 
-      /**
-      * @name registerErrorFn
-      * @desc Log failure to the console
-      */
-      function registerErrorFn(data, status, headers, config) {
-        console.error("Registration failed");
-      }
+      // /**
+      // * @name registerErrorFn
+      // * @desc Log failure to the console
+      // */
+      // function registerErrorFn(data, status, headers, config) {
+      //   console.error("Registration failed");
+      // }
     }
 
 

@@ -9,12 +9,12 @@
     .module('riddlesapp.authentication.controllers')
     .controller('RegisterController', RegisterController);
 
-  RegisterController.$inject = ['$location', '$scope', 'Authentication'];
+  RegisterController.$inject = ['$location', '$scope', 'Authentication', 'Snackbar'];
 
   /**
   * @namespace RegisterController
   */
-  function RegisterController($location, $scope, Authentication) {
+  function RegisterController($location, $scope, Authentication, Snackbar) {
     var vm = this;
 
     vm.register = register;
@@ -39,7 +39,17 @@
     * @memberOf riddlesapp.authentication.controllers.RegisterController
     */
     function register() {
-      Authentication.register(vm.email, vm.password, vm.username);
+      Authentication
+        .register(vm.email, vm.password, vm.username)
+        .then(null, registerErrorFn);
+
+      /**
+      * @name registerErrorFn
+      * @desc Show registration error on Snackbar
+      */
+      function registerErrorFn(data, status, headers, config) {
+        Snackbar.error('Unable to register');
+      }
     }
   }
 })();
