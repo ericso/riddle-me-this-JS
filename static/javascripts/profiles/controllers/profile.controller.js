@@ -1,12 +1,12 @@
 /**
 * ProfileController
-* @namespace riddles.profiles.controllers
+* @namespace riddlesapp.profiles.controllers
 */
 (function() {
   'use strict';
 
   angular
-    .module('riddles.profiles.controllers')
+    .module('riddlesapp.profiles.controllers')
     .controller('ProfileController', ProfileController);
 
   ProfileController.$inject = ['$location', '$routeParams', 'Posts', 'Profile', 'Snackbar'];
@@ -25,7 +25,7 @@
     /**
     * @name activate
     * @desc Actions to be performed when this controller is instantiated
-    * @memberOf riddles.profiles.controllers.ProfileController
+    * @memberOf riddlesapp.profiles.controllers.ProfileController
     */
     function activate() {
       var username = $routeParams.username.substr(1);

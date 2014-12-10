@@ -1,12 +1,12 @@
 /**
 * Profile
-* @namespace riddles.profiles.services
+* @namespace riddlesapp.profiles.services
 */
 (function() {
   'use strict';
 
   angular
-    .module('riddles.profiles.services')
+    .module('riddlesapp.profiles.services')
     .factory('Profile', Profile);
 
   Profile.$inject = ['$http'];
@@ -18,7 +18,7 @@
     /**
     * @name Profile
     * @desc The factory to be returned
-    * @memberOf riddles.profiles.services.Profile
+    * @memberOf riddlesapp.profiles.services.Profile
     */
     var Profile = {
       destroy: destroy,
@@ -35,7 +35,7 @@
     * @desc Destroys the given profile
     * @param {Object} profile The profile to be destroyed
     * @returns {Promise}
-    * @memberOf riddles.profiles.services.Profile
+    * @memberOf riddlesapp.profiles.services.Profile
     */
     function destroy(profile) {
       return $http.delete('/api/v1/accounts/' + profile.username + '/');
@@ -46,7 +46,7 @@
     * @desc Gets the profile for user with username `username`
     * @param {string} username The username of the user to fetch
     * @returns {Promise}
-    * @memberOf riddles.profiles.services.Profile
+    * @memberOf riddlesapp.profiles.services.Profile
     */
     function get(username) {
       return $http.get('/api/v1/accounts/' + username + '/');
@@ -57,7 +57,7 @@
     * @desc Update the given profile
     * @param {Object} profile The profile to be updated
     * @returns {Promise}
-    * @memberOf riddles.profiles.services.Profile
+    * @memberOf riddlesapp.profiles.services.Profile
     */
     function update(profile) {
       return $http.put('/api/v1/accounts/' + profile.username + '/', profile);

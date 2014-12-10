@@ -2,18 +2,18 @@
   'use strict';
 
   angular
-    .module('riddles.posts', [
-      'riddles.posts.controllers',
-      'riddles.posts.directives',
-      'riddles.posts.services'
+    .module('riddlesapp.posts', [
+      'riddlesapp.posts.controllers',
+      'riddlesapp.posts.directives',
+      'riddlesapp.posts.services'
     ]);
 
   angular
-    .module('riddles.posts.controllers', []);
+    .module('riddlesapp.posts.controllers', []);
 
   angular
-    .module('riddles.posts.directives', ['ngDialog']);
+    .module('riddlesapp.posts.directives', ['ngDialog']);
 
   angular
-    .module('riddles.posts.services', []);
+    .module('riddlesapp.posts.services', []);
 })();

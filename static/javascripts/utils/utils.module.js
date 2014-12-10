@@ -2,10 +2,10 @@
   'use strict';
 
   angular
-    .module('riddles.utils', [
-      'riddles.utils.services'
+    .module('riddlesapp.utils', [
+      'riddlesapp.utils.services'
     ]);
 
   angular
-    .module('riddles.utils.services', []);
+    .module('riddlesapp.utils.services', []);
 })();

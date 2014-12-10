@@ -1,12 +1,12 @@
 /**
 * NavbarController
-* @namespace riddles.layout.controllers
+* @namespace riddlesapp.layout.controllers
 */
 (function() {
   'use strict';
 
   angular
-    .module('riddles.layout.controllers')
+    .module('riddlesapp.layout.controllers')
     .controller('NavbarController', NavbarController);
 
   NavbarController.$inject = ['$scope', 'Authentication'];
@@ -22,7 +22,7 @@
     /**
     * @name logout
     * @desc Log the user out
-    * @memberOf riddles.layout.controllers.NavbarController
+    * @memberOf riddlesapp.layout.controllers.NavbarController
     */
     function logout() {
       Authentication.logout();

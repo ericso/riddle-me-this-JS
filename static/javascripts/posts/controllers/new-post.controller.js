@@ -1,12 +1,12 @@
 /**
 * NewPostController
-* @namespace riddles.posts.controllers
+* @namespace riddlesapp.posts.controllers
 */
 (function () {
   'use strict';
 
   angular
-    .module('riddles.posts.controllers')
+    .module('riddlesapp.posts.controllers')
     .controller('NewPostController', NewPostController);
 
   NewPostController.$inject = ['$rootScope', '$scope', 'Authentication', 'Snackbar', 'Posts'];
@@ -22,7 +22,7 @@
     /**
     * @name submit
     * @desc Create a new Post
-    * @memberOf riddles.posts.controllers.NewPostController
+    * @memberOf riddlesapp.posts.controllers.NewPostController
     */
     function submit() {
       $rootScope.$broadcast('post.created', {

@@ -2,14 +2,14 @@
   'use static';
 
   angular
-    .module('riddles.profiles', [
-      'riddles.profiles.controllers',
-      'riddles.profiles.services'
+    .module('riddlesapp.profiles', [
+      'riddlesapp.profiles.controllers',
+      'riddlesapp.profiles.services'
     ]);
 
   angular
-    .module('riddles.profiles.controllers', []);
+    .module('riddlesapp.profiles.controllers', []);
 
   angular
-    .module('riddles.profiles.services', []);
+    .module('riddlesapp.profiles.services', []);
 })();

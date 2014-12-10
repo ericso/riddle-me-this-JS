@@ -1,12 +1,12 @@
 /**
 * ProfileSettingsController
-* @namespace riddles.profiles.controllers
+* @namespace riddlesapp.profiles.controllers
 */
 (function() {
   'use strict';
 
   angular
-    .module('riddles.profiles.controllers')
+    .module('riddlesapp.profiles.controllers')
     .controller('ProfileSettingsController', ProfileSettingsController);
 
   ProfileSettingsController.$inject = ['$location', '$routeParams', 'Authentication', 'Profile', 'Snackbar'];
@@ -25,7 +25,7 @@
     /**
     * @name activate
     * @desc Actions to be performed when this controller is instantiated.
-    * @memberOf riddles.profiles.controllers.ProfileSettingsController
+    * @memberOf riddlesapp.profiles.controllers.ProfileSettingsController
     */
     function activate() {
       var authenticatedAccount = Authentication.getAuthenticatedAccount();
@@ -66,7 +66,7 @@
     /**
     * @name destroy
     * @desc Destroy this user's profile
-    * @memberOf riddles.profiles.controllers.ProfileSettingsController
+    * @memberOf riddlesapp.profiles.controllers.ProfileSettingsController
     */
     function destroy() {
       Profile
@@ -96,7 +96,7 @@
     /**
     * @name update
     * @desc Update this user's profile
-    * @memberOf riddles.profiles.controllers.ProfileSettingsController
+    * @memberOf riddlesapp.profiles.controllers.ProfileSettingsController
     */
     function update() {
       Profile.update(vm.profile).then(profileSuccessFn, profileErrorFn);

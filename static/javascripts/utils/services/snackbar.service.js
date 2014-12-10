@@ -1,12 +1,12 @@
 /**
 * Snackbar
-* @namespace riddles.utils.services
+* @namespace riddlesapp.utils.services
 */
 (function($, _) {
   'use strict';
 
   angular
-    .module('riddles.utils.services')
+    .module('riddlesapp.utils.services')
     .factory('Snackbar', Snackbar);
 
   /**
@@ -44,7 +44,7 @@
     * @desc Display an error snackbar
     * @param {string} content The content of the snackbar
     * @param {Object} options Options for displaying the snackbar
-    * @memberOf riddles.utils.services.Snackbar
+    * @memberOf riddlesapp.utils.services.Snackbar
     */
     function error(content, options) {
       _snackbar('Error: ' + content, options);
@@ -55,7 +55,7 @@
     * @desc Display a standard snackbar
     * @param {string} content The content of the snackbar
     * @param {Object} options Options for displaying the snackbar
-    * @memberOf riddles.utils.services.Snackbar
+    * @memberOf riddlesapp.utils.services.Snackbar
     */
     function show(content, options) {
       _snackbar(content, options);

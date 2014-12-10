@@ -1,12 +1,12 @@
 /**
 * IndexController
-* @namespace riddles.layout.controllers
+* @namespace riddlesapp.layout.controllers
 */
 (function() {
   'use strict';
 
   angular
-    .module('riddles.layout.controllers')
+    .module('riddlesapp.layout.controllers')
     .controller('IndexController', IndexController);
 
   IndexController.$inject = ['$scope', 'Authentication', 'Posts', 'Snackbar'];
@@ -25,7 +25,7 @@
     /**
     * @name activate
     * @desc Actions to be performed when this controller is instantiated
-    * @memberOf riddles.layout.controllers.IndexController
+    * @memberOf riddlesapp.layout.controllers.IndexController
     */
     function activate() {
       Posts.all().then(postsSuccessFn, postsErrorFn);

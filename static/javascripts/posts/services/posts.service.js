@@ -1,12 +1,12 @@
 /**
 * Posts
-* @namespace riddles.posts.services
+* @namespace riddlesapp.posts.services
 */
 (function() {
   'use strict';
 
   angular
-    .module('riddles.posts.services')
+    .module('riddlesapp.posts.services')
     .factory('Posts', Posts);
 
   Posts.$inject = ['$http'];
@@ -30,7 +30,7 @@
     * @name all
     * @desc Get all Posts
     * @returns {Promise}
-    * @memberOf riddles.posts.services.Posts
+    * @memberOf riddlesapp.posts.services.Posts
     */
     function all() {
       return $http.get('/api/v1/posts/');
@@ -41,7 +41,7 @@
     * @desc Create a new Post
     * @param {string} content The content of the new Post
     * @returns {Promise}
-    * @memberOf riddles.posts.services.Posts
+    * @memberOf riddlesapp.posts.services.Posts
     */
     function create(content) {
       return $http.post('/api/v1/posts/', {
@@ -54,7 +54,7 @@
     * @desc Get the Posts of a given user
     * @param {string} username The username to get Posts for
     * @returns {Promise}
-    * @memberOf riddles.posts.services.Posts
+    * @memberOf riddlesapp.posts.services.Posts
     */
     function get(username) {
       return $http.get('/api/v1/accounts/' + username + '/posts/');

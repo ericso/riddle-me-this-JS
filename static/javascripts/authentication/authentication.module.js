@@ -2,15 +2,15 @@
   'use strict';
 
   angular
-    .module('riddles.authentication', [
-      'riddles.authentication.controllers',
-      'riddles.authentication.services'
+    .module('riddlesapp.authentication', [
+      'riddlesapp.authentication.controllers',
+      'riddlesapp.authentication.services'
     ]);
 
   angular
-    .module('riddles.authentication.controllers', []);
+    .module('riddlesapp.authentication.controllers', []);
 
   angular
-    .module('riddles.authentication.services', ['ngCookies']);
+    .module('riddlesapp.authentication.services', ['ngCookies']);
 
 })();

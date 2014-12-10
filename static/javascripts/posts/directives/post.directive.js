@@ -1,12 +1,12 @@
 /**
 * Post
-* @namespace riddles.posts.directives
+* @namespace riddlesapp.posts.directives
 */
 (function() {
   'use strict';
 
   angular
-    .module('riddles.posts.directives')
+    .module('riddlesapp.posts.directives')
     .directive('post', post)
 
   /**
@@ -16,7 +16,7 @@
     /**
     * @name directive
     * @desc The directive to be returned
-    * @memberOf riddles.posts.directives.Post
+    * @memberOf riddlesapp.posts.directives.Post
     */
     var directive = {
       restrict: 'E',

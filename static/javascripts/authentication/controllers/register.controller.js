@@ -1,12 +1,12 @@
 /**
 * Register controller
-* @namespace riddles.authentication.controllers
+* @namespace riddlesapp.authentication.controllers
 */
 (function() {
   'use strict';
 
   angular
-    .module('riddles.authentication.controllers')
+    .module('riddlesapp.authentication.controllers')
     .controller('RegisterController', RegisterController);
 
   RegisterController.$inject = ['$location', '$scope', 'Authentication'];
@@ -24,7 +24,7 @@
     /**
     * @name activate
     * @desc Actions to be performed when this controller is instantiated
-    * @memberOf riddles.authentication.controllers.RegisterController
+    * @memberOf riddlesapp.authentication.controllers.RegisterController
     */
     function activate() {
       // If the user is authenticated, they should not be here.
@@ -36,7 +36,7 @@
     /**
     * @name register
     * @desc Register a new user
-    * @memberOf riddles.authentication.controllers.RegisterController
+    * @memberOf riddlesapp.authentication.controllers.RegisterController
     */
     function register() {
       Authentication.register(vm.email, vm.password, vm.username);
