@@ -9,7 +9,8 @@
       'riddlesapp.layout',
       'riddlesapp.posts',
       'riddlesapp.utils',
-      'riddlesapp.profiles'
+      'riddlesapp.profiles',
+      'riddlesapp.riddles'
     ]);
 
   angular

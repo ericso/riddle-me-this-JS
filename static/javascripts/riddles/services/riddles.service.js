@@ -36,7 +36,6 @@
       return $http.get('/api/v1/riddles/');
     }
 
-
     /**
     * @name create
     * @desc Create a new Riddle

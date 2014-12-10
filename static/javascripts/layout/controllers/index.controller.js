@@ -18,7 +18,7 @@
     var vm = this;
 
     vm.isAuthenticated = Authentication.isAuthenticated();
-    vm.posts = [];
+    vm.riddles = [];
 
     activate();
 

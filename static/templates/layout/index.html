@@ -2,8 +2,8 @@
 
 <riddles riddles="vm.riddles" ng-show="vm.riddles && vm.riddles.length"></posts>
 
-<a class="btn btn-primary btn-fab btn-raised mdi-content-add btn-add-new-post"
+<a class="btn btn-primary btn-fab btn-raised mdi-content-add btn-add-new-riddle"
   href="javascript:void(0)"
   ng-show="vm.isAuthenticated"
-  ng-dialog="/static/templates/posts/new-post.html"
-  ng-dialog-controller="NewPostController as vm"></a>
+  ng-dialog="/static/templates/riddles/new-riddle.html"
+  ng-dialog-controller="NewRiddleController as vm"></a>
